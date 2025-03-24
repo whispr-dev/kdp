@@ -2,7 +2,7 @@
 # a markdown to pdf/epub/html converter
 # for PC, Mac and Linux [untested on Mac and Linux]
 
-20250324181156
+20250324181156 Mon v.0.1.0
 
 ---
 
@@ -42,38 +42,46 @@ Markdown parsing with:
 File picker GUI fallback if no file path is given on the command line
 ```
 
+
 ---
 
 
 ## To install
-n.b. 
-`from fpdf import FPDF  # fpdf2 keeps the same class name`
+if using `.exe` no install is required - it's self contained!
 
-refers to fact that fpdf og i deprecate and fpdf2 must be installed hence:
-`pip install fpdf2`
+n.b. if using `.py`, line 7: 
+`from fpdf import FPDF  # fpdf2 keeps the same class name`
+refers to fact that fpdf og is deprecate and fpdf2 must be installed, hence:
+
+`pip install fpdf2 markdown2 ebooklib`
+
+
+---
 
 
 ## To use:
-If using CLI:
+Either; run the `.exe` and follow along easy onscreen prompts; or,
 
+If using CLI with a `.py`:
 `python markdown_to_pdf.py "\path\to\your\story.txt"`
 
 Or just:
-
 `python markdown_to_pdf.py`
 
 …and a file picker will let you choose!
+
 
 Your output will include:
 `\path\to\your\story.pdf`
 `\path\to\your\story.epub`
 `\path\to\your\story.html`
 
+
 ---
 
-## Can Handle:
-will convert md # to title and ## headings to chapter sections:
 
+## The program can handle:
+converting md # to title and ## headings to chapter sections:
 
 ```
 ---
@@ -97,5 +105,6 @@ This is *italic* and **bold**, or even a *bit of **bold inside italic***.
 
 > This is a quote, isn't it?
 ```
+
 
 ---
