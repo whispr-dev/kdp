@@ -1,6 +1,9 @@
 # Unused fonts
 fonts/unused/
 
+# Old junk code
+src/txt_to_pdf_old_v-0-0-x/
+
 # Ignore temp directories
 temp/
 

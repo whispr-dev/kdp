@@ -32,9 +32,9 @@ DEFAULT_MONO_FONT = "FiraCode-Regular.ttf"
 # === FONT PATHS ===
 script_dir = os.path.dirname(__file__)
 font_dir = os.path.abspath(os.path.join(script_dir, "..", "..", "fonts"))
-font_regular = os.path.join(font_dir, "DejaVuSerif.ttf")
-font_bold = os.path.join(font_dir, "DejaVuSerif-Bold.ttf")
-font_italic = os.path.join(font_dir, "DejaVuSerif-Italic.ttf")
+font_regular = os.path.join(font_dir, "DejaVuSans.ttf")
+font_bold = os.path.join(font_dir, "DejaVuSans-Bold.ttf")
+font_italic = os.path.join(font_dir, "DejaVuSans-Oblique.ttf")
 font_mono = os.path.join(font_dir, "DejaVuSansMono.ttf")
 
 for path in [font_regular, font_bold, font_italic, font_mono]:
