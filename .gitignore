@@ -1,8 +1,9 @@
-# Unused fonts
-fonts/unused/
-
-# Old junk code
+# Old junk code and unused fonts
 src/txt_to_pdf_old_v-0-0-x/
+src/txt_to_pdf_old_v-0-0-x/fonts/unused/
+
+# Build crud
+src/txt_to_pdf_old_v-0-0-x/build/
 
 # Ignore temp directories
 temp/

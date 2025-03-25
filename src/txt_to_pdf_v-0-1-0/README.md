@@ -1,100 +1,94 @@
-# README.md for markdown_to_pdf.py
-# a markdown to pdf/epub/html converter
-# for PC, Mac and Linux [untested on Mac and Linux]
+# markdown_to_pdf.py — A Markdown to PDF/EPUB/HTML Converter
 
-20250324181156 Mon v.0.1.0
+**Cross-platform**: PC Mac (untested) Linux (untested)  
+Version: `v0.1.0` — 20250324214522 Mon
 
----
-
-## Features:
 
 ---
 
-New Features Fully Supported:
-Cover page with:
 
-Title
+## Features
 
-Author
+Fully-featured, beautifully typeset manuscript generator from a simple `.md` or `.txt` file!
 
-Optional cover image
+### Cover Page
+- Custom **title** and **author**
+- Optional **cover image**
+- Optional **logo**
 
-Optional logo
+### Auto Table of Contents
+- Generated from your Markdown headings (`#`, `##`)
 
-Auto-generated Table of Contents
+### Markdown Rendering
+- `#`, `##`, `###` → Large, medium, and small headings
+- `> quote` → *Grey italic blockquotes*
+- `- item` → Bulleted lists
+- `*italic*`, `**bold**` → Styled text
+- `---` → Horizontal divider
+- `![alt](image.jpg)` → Inline images
+- <code>```code```</code> → Monospaced code blocks
 
-Markdown parsing with:
+### Bonus Features
+- File picker GUI if no file is passed via command line
+- Output includes:
+  - PDF
+  - EPUB (auto-launched)
+  - HTML
 
-#, ##, ### → Chapter headings
 
-> quote → Italic grey blockquote
+---
 
-- list item → Bulleted list
 
-*italic*, **bold** → Inline styling
+## Installation
 
---- → Horizontal rule
+### If using the `.exe`:
+No installation required! Just run and go
 
-![alt](image.jpg) → Inline image rendering
+### If using the `.py` script:
 
-``` blocks → Monospaced code sections
+You'll need to install the following dependencies:
 
-File picker GUI fallback if no file path is given on the command line
+```
+pip install fpdf2 markdown2 ebooklib pillow
+fpdf2 replaces the old fpdf library
+Pillow is used for image handling
 ```
 
 
 ---
 
 
-## To install
-if using `.exe` no install is required - it's self contained!
-
-n.b. if using `.py`, line 7: 
-`from fpdf import FPDF  # fpdf2 keeps the same class name`
-refers to fact that fpdf og is deprecate and fpdf2 must be installed, hence:
-
-`pip install fpdf2 markdown2 ebooklib`
-
-
----
-
-
-## To use:
-Either; run the `.exe` and follow along easy onscreen prompts; or,
-
-If using CLI with a `.py`:
-`python markdown_to_pdf.py "\path\to\your\story.txt"`
+## How to Use
+Command Line (recommended)
+`python markdown_to_pdf.py "C:\path\to\your\story.md"`
 
 Or just:
 `python markdown_to_pdf.py`
 
-…and a file picker will let you choose!
+…to open a file picker GUI.
 
-
-Your output will include:
-`\path\to\your\story.pdf`
-`\path\to\your\story.epub`
-`\path\to\your\story.html`
+Output will include:
+`C:\path\to\your\story.pdf     ← your typeset printable manuscript`
+`C:\path\to\your\story.epub    ← auto-launched for preview (KDP ready!)`
+`C:\path\to\your\story.html    ← web-viewable version`
 
 
 ---
 
 
-## The program can handle:
-converting md # to title and ## headings to chapter sections:
+## Example Markdown Syntax
 
 ```
 ---
 title: The Quack Side of the Law
-author: wofl
+author: Wofl
 cover: cover.jpg
 logo: logo.png
 ---
 
+# The Quack Side of the Law
 
-# Title
-
-## Chapter 1
+## Chapter 1: A Taste of Escape
 
 This is *italic* and **bold**, or even a *bit of **bold inside italic***.
 
@@ -104,7 +98,37 @@ This is *italic* and **bold**, or even a *bit of **bold inside italic***.
 - Bullet point two
 
 > This is a quote, isn't it?
+
+![Detective Mallard](mallard.jpg)
+
+def duck_waddle(): print("flap flap")
 ```
 
 
 ---
+
+
+## Pro Tips
+Add title, author, cover, and logo at the top of your Markdown using the --- metadata block.
+
+If something breaks, check if you're using fancy Unicode symbols that don't fit the page (PDFs are picky about width).
+
+Make sure images are in the same folder as your .md file or use full paths!
+
+
+---
+
+
+## Developer Notes
+Built with fpdf2, markdown2, ebooklib, and Pillow
+
+Designed to work inside a PyInstaller .exe with bundled fonts and assets
+
+Unicode font compatibility via DejaVuSerif/Mono included
+
+
+---
+
+
+### Written with love for frens who publish
+Happy writing, happy typesetting!
