@@ -1,0 +1,6 @@
+fpdf2
+Pillow
+markdown2
+EbookLib
+Pygments
+matplotlib

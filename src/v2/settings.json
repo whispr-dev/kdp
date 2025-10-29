@@ -1,0 +1,21 @@
+{
+    "output_formats": {
+        "pdf": true,
+        "epub": true,
+        "html": true
+    },
+    "pdf_settings": {
+        "page_format": "A4",
+        "margins": {
+            "top": 20,
+            "bottom": 20,
+            "left": 25,
+            "right": 25
+        },
+        "font_family": "DejaVuSerif",
+        "font_size": 12
+    },
+    "epub_settings": {
+        "css_file": "custom_style.css"
+    }
+}
